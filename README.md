@@ -21,8 +21,7 @@ composer require php-forge/baseline:^0.1 --dev
 
 ## Documentation
 
-- [Testing Guide](docs/testing.md)
-- [Development Guide](docs/development.md)
+- 📚 [Installation Guide](docs/installation.md)
 
 ## Package information
 
