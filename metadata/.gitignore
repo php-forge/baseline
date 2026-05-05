@@ -39,7 +39,7 @@ package-lock.json
 # phpunit (if present)
 .phpunit.cache
 .phpunit.result.cache
-phpunit.xml*
+phpunit.xml
 
 # vagrant (if present)
 .vagrant

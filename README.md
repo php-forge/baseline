@@ -1,6 +1,6 @@
 <!-- markdownlint-disable MD041 -->
 <p align="center">
-    <a href="https://github.com/php-forge/coding-standard" target="_blank">
+    <a href="https://github.com/php-forge/baseline" target="_blank">
         <img src="https://avatars.githubusercontent.com/u/103309199?s%25253D400%252526u%25253Dca3561c692f53ed7eb290d3bb226a2828741606f%252526v%25253D4" width="35%" alt="PHP Forge">
     </a>
     <h1 align="center">Baseline</h1>
@@ -13,15 +13,96 @@
     <em>Code style, linters, CI workflows, and dev environment tooling shared across repositories via Composer.</em>
 </p>
 
+## System requirements
+
+- [`PHP`](https://www.php.net/downloads) 8.3 or higher.
+- [`Composer`](https://getcomposer.org/download/) for dependency management.
+
 ## Installation
 
 ```bash
 composer require php-forge/baseline:^0.1 --dev
 ```
 
-## Documentation
+Or add the dependency manually to `composer.json`:
 
-- 📚 [Installation Guide](docs/installation.md)
+```json
+{
+    "require-dev": {
+        "php-forge/baseline": "^0.1"
+    }
+}
+```
+
+Then run `composer update`.
+
+## Scaffolded distribution
+
+This package is a [`yii2-extensions/scaffold`](https://github.com/yii2-extensions/scaffold) provider for **dev
+environment metadata** (editor, gitignore, prettier, stylelint, super-linter configs, and more). Templates live under
+`metadata/` and are mapped to consumer roots via the `{from, to}` form in `scaffold.json`.
+
+Opt in by allowing the plugin and listing this package as an authorised provider:
+
+```bash
+composer require yii2-extensions/scaffold:^0.1 --dev
+```
+
+```json
+{
+    "config": {
+        "allow-plugins": {
+            "yii2-extensions/scaffold": true
+        }
+    },
+    "extra": {
+        "scaffold": {
+            "auto": false,
+            "allowed-packages": [
+                "php-forge/baseline"
+            ]
+        }
+    }
+}
+```
+
+With `auto: false`, the plugin does not run on `composer install`; sync templates manually:
+
+```bash
+vendor/bin/scaffold reapply --provider=php-forge/baseline
+vendor/bin/scaffold diff <file>
+vendor/bin/scaffold status
+```
+
+### Files distributed
+
+| File                                 | Mode       | Purpose                                                  |
+| ------------------------------------ | ---------- | -------------------------------------------------------- |
+| `.editorconfig`                      | `append`   | Editor settings; consumer-specific lines preserved       |
+| `.gitattributes`                     | `replace`  | Text/binary handling, archive excludes                   |
+| `.gitignore`                         | `append`   | Common ignore patterns; project-specific lines preserved |
+| `.styleci.yml`                       | `replace`  | StyleCI config (PSR-12 + risky)                          |
+| `.ecrc`                              | `replace`  | editor-config-checker exclusions                         |
+| `.prettierignore`                    | `replace`  | Paths Prettier should skip                               |
+| `.prettierrc.json`                   | `replace`  | Prettier formatting rules                                |
+| `.stylelintignore`                   | `replace`  | Paths stylelint should skip                              |
+| `composer-require-checker.json`      | `preserve` | Composer require-checker whitelist (project-specific)    |
+| `.github/linters/actionlint.yml`     | `replace`  | actionlint config for Super-Linter                       |
+| `.github/linters/.codespellrc`       | `replace`  | codespell config                                         |
+| `.github/linters/.gitleaks.toml`     | `replace`  | gitleaks config                                          |
+| `.github/linters/.markdown-lint.yml` | `replace`  | markdownlint config                                      |
+
+Mode semantics:
+
+- `replace`: lock-step with this package. Local edits trigger a warning and the file is skipped on update.
+- `append`: provider content is merged into the existing file; consumer additions never blown away.
+- `preserve`: file is written once on first install and never overwritten.
+
+## Related packages
+
+For ECS and Rector configurations and their root wrapper templates, see
+[`php-forge/coding-standard`](https://github.com/php-forge/coding-standard). The two packages are independent — adopt
+either, both, or neither.
 
 ## Package information
 
