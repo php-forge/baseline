@@ -21,6 +21,17 @@
 *.gif  binary
 *.ttf  binary
 
+# Scaffold templates: ship every file under metadata/ in the dist archive even when its basename matches an
+# export-ignore rule above. Per-file negations are required because git's gitattributes pattern resolution leaks
+# basename matches through leading-slash patterns for dotfiles, so `metadata/**` alone does not override them.
+metadata/**                             -export-ignore
+metadata/.editorconfig                  -export-ignore
+metadata/.gitattributes                 -export-ignore
+metadata/.github/**                     -export-ignore
+metadata/.gitignore                     -export-ignore
+metadata/.styleci.yml                   -export-ignore
+metadata/composer-require-checker.json  -export-ignore
+
 # Exclude files from the archive
 /.editorconfig                  export-ignore
 /.gitattributes                 export-ignore
@@ -37,17 +48,6 @@
 /rector.php                     export-ignore
 /runtime                        export-ignore
 /tests                          export-ignore
-
-# Scaffold templates: ship every file under metadata/ in the dist archive even when its basename matches an
-# export-ignore rule above. Per-file negations are required because git's gitattributes pattern resolution leaks
-# basename matches through leading-slash patterns for dotfiles, so `metadata/**` alone does not override them.
-metadata/**                     -export-ignore
-metadata/.editorconfig          -export-ignore
-metadata/.gitattributes         -export-ignore
-metadata/.github/**             -export-ignore
-metadata/.gitignore             -export-ignore
-metadata/.styleci.yml           -export-ignore
-metadata/composer-require-checker.json  -export-ignore
 
 # Avoid merge conflicts in CHANGELOG
 # https://about.gitlab.com/2015/02/10/gitlab-reduced-merge-conflicts-by-90-percent-with-changelog-placeholders/
