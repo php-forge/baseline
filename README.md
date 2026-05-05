@@ -80,7 +80,6 @@ vendor/bin/scaffold status
 ├── .gitattributes                     # replace: Text/binary handling, archive excludes
 ├── .gitignore                         # append: Common ignore patterns; project-specific lines preserved
 ├── .styleci.yml                       # replace: StyleCI config (PSR-12 + risky)
-├── .ecrc                              # replace: editor-config-checker exclusions
 ├── .prettierignore                    # replace: Paths Prettier should skip
 ├── .prettierrc.json                   # replace: Prettier formatting rules
 ├── .stylelintignore                   # replace: Paths stylelint should skip
