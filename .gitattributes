@@ -38,6 +38,10 @@
 /runtime                        export-ignore
 /tests                          export-ignore
 
+# Scaffold templates: ship every file under metadata/ in the dist archive even when its basename matches an
+# export-ignore rule above. Last-match-wins in gitattributes, so this negation overrides earlier patterns.
+metadata/**                     -export-ignore
+
 # Avoid merge conflicts in CHANGELOG
 # https://about.gitlab.com/2015/02/10/gitlab-reduced-merge-conflicts-by-90-percent-with-changelog-placeholders/
 /CHANGELOG.md merge=union
