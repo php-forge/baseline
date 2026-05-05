@@ -58,9 +58,7 @@ composer require yii2-extensions/scaffold:^0.1 --dev
     "extra": {
         "scaffold": {
             "auto": false,
-            "allowed-packages": [
-                "php-forge/baseline"
-            ]
+            "allowed-packages": ["php-forge/baseline"]
         }
     }
 }

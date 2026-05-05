@@ -1,15 +1,18 @@
 {
     "copy": [
-        {"from": "metadata/.editorconfig", "to": ".editorconfig"},
-        {"from": "metadata/.gitattributes", "to": ".gitattributes"},
-        {"from": "metadata/.gitignore", "to": ".gitignore"},
-        {"from": "metadata/.styleci.yml", "to": ".styleci.yml"},
-        {"from": "metadata/.ecrc", "to": ".ecrc"},
-        {"from": "metadata/.prettierignore", "to": ".prettierignore"},
-        {"from": "metadata/.prettierrc.json", "to": ".prettierrc.json"},
-        {"from": "metadata/.stylelintignore", "to": ".stylelintignore"},
-        {"from": "metadata/composer-require-checker.json", "to": "composer-require-checker.json"},
-        {"from": "metadata/.github/linters", "to": ".github/linters"}
+        { "from": "metadata/.editorconfig", "to": ".editorconfig" },
+        { "from": "metadata/.gitattributes", "to": ".gitattributes" },
+        { "from": "metadata/.gitignore", "to": ".gitignore" },
+        { "from": "metadata/.styleci.yml", "to": ".styleci.yml" },
+        { "from": "metadata/.ecrc", "to": ".ecrc" },
+        { "from": "metadata/.prettierignore", "to": ".prettierignore" },
+        { "from": "metadata/.prettierrc.json", "to": ".prettierrc.json" },
+        { "from": "metadata/.stylelintignore", "to": ".stylelintignore" },
+        {
+            "from": "metadata/composer-require-checker.json",
+            "to": "composer-require-checker.json"
+        },
+        { "from": "metadata/.github/linters", "to": ".github/linters" }
     ],
     "modes": {
         ".editorconfig": "append",
