@@ -74,21 +74,25 @@ vendor/bin/scaffold status
 
 ### Files distributed
 
-| File                                 | Mode       | Purpose                                                  |
-| ------------------------------------ | ---------- | -------------------------------------------------------- |
-| `.editorconfig`                      | `append`   | Editor settings; consumer-specific lines preserved       |
-| `.gitattributes`                     | `replace`  | Text/binary handling, archive excludes                   |
-| `.gitignore`                         | `append`   | Common ignore patterns; project-specific lines preserved |
-| `.styleci.yml`                       | `replace`  | StyleCI config (PSR-12 + risky)                          |
-| `.ecrc`                              | `replace`  | editor-config-checker exclusions                         |
-| `.prettierignore`                    | `replace`  | Paths Prettier should skip                               |
-| `.prettierrc.json`                   | `replace`  | Prettier formatting rules                                |
-| `.stylelintignore`                   | `replace`  | Paths stylelint should skip                              |
-| `composer-require-checker.json`      | `preserve` | Composer require-checker whitelist (project-specific)    |
-| `.github/linters/actionlint.yml`     | `replace`  | actionlint config for Super-Linter                       |
-| `.github/linters/.codespellrc`       | `replace`  | codespell config                                         |
-| `.github/linters/.gitleaks.toml`     | `replace`  | gitleaks config                                          |
-| `.github/linters/.markdown-lint.yml` | `replace`  | markdownlint config                                      |
+```text
+.
+├── .editorconfig                      # append: Editor settings; consumer-specific lines preserved
+├── .gitattributes                     # replace: Text/binary handling, archive excludes
+├── .gitignore                         # append: Common ignore patterns; project-specific lines preserved
+├── .styleci.yml                       # replace: StyleCI config (PSR-12 + risky)
+├── .ecrc                              # replace: editor-config-checker exclusions
+├── .prettierignore                    # replace: Paths Prettier should skip
+├── .prettierrc.json                   # replace: Prettier formatting rules
+├── .stylelintignore                   # replace: Paths stylelint should skip
+├── composer-require-checker.json      # preserve: Composer require-checker whitelist (project-specific)
+└── .github
+    └── linters
+        ├── .codespellrc               # replace: codespell config
+        ├── .editorconfig-checker.json # replace: editor-config-checker config for Super-Linter
+        ├── .gitleaks.toml             # replace: gitleaks config
+        ├── .markdown-lint.yml         # replace: markdownlint config
+        └── actionlint.yml             # replace: actionlint config for Super-Linter
+```
 
 Mode semantics:
 
