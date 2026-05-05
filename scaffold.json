@@ -1,7 +1,7 @@
 {
     "copy": [
         { "from": "metadata/.editorconfig", "to": ".editorconfig" },
-        { "from": "metadata/.gitattributes", "to": ".gitattributes" },
+        { "from": "metadata/gitattributes", "to": ".gitattributes" },
         { "from": "metadata/.gitignore", "to": ".gitignore" },
         { "from": "metadata/.styleci.yml", "to": ".styleci.yml" },
         { "from": "metadata/.ecrc", "to": ".ecrc" },

@@ -21,6 +21,11 @@
 *.gif  binary
 *.ttf  binary
 
+# Scaffold templates: ship every file under metadata/ in the dist archive. The negation is required because
+# git's gitattributes leaks leading-slash root patterns into nested basenames; this blanket override guarantees
+# scaffold templates reach consumers via the dist archive.
+metadata/**                     -export-ignore
+
 # Exclude files from the archive
 /.editorconfig                  export-ignore
 /.gitattributes                 export-ignore
@@ -37,10 +42,6 @@
 /rector.php                     export-ignore
 /runtime                        export-ignore
 /tests                          export-ignore
-
-# Scaffold templates: ship every file under metadata/ in the dist archive even when its basename matches an
-# export-ignore rule above. Last-match-wins in gitattributes, so this negation overrides earlier patterns.
-metadata/**                     -export-ignore
 
 # Avoid merge conflicts in CHANGELOG
 # https://about.gitlab.com/2015/02/10/gitlab-reduced-merge-conflicts-by-90-percent-with-changelog-placeholders/
