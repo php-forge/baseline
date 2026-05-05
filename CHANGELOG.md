@@ -10,3 +10,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - feat: initial release as `yii2-extensions/scaffold` provider for dev environment standards (editor, linters, CI).
 - feat: allow shipping of metadata files in dist archive by overriding export-ignore rules.
 - feat: add `gitattributes` for metadata files and update `scaffold.json` references.
+- feat: update `.ecrc` and `.prettierignore` to include `scaffold-lock.json` for better file management.
