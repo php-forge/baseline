@@ -12,3 +12,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - feat: add `gitattributes` for metadata files and update `scaffold.json` references.
 - feat: update `.ecrc` and `.prettierignore` to include `scaffold-lock.json` for better file management.
 - feat: add `.editorconfig-checker.json` for improved linting configuration.
+- feat: add `.editorconfig-checker.json` in scaffold for baseline configuration.
