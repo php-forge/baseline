@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## 0.1.1 Under development
 
+- fix: enable `[extend] useDefault = true` in `.github/linters/.gitleaks.toml` so consumers load gitleaks default rules instead of disabling the secret scan.
+
 ## 0.1.0 May 05, 2026
 
 - feat: initial release as `yii2-extensions/scaffold` provider for dev environment standards (editor, linters, CI).
