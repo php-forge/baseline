@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## 0.1.2 Under development
 
+- fix: remove `phpunit.xml` from `.gitignore` and update `composer-require-checker.json` structure.
+
 ## 0.1.1 May 06, 2026
 
 - fix: enable `[extend] useDefault = true` in `.github/linters/.gitleaks.toml` so consumers load gitleaks default rules instead of disabling the secret scan.
