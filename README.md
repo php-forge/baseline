@@ -39,7 +39,7 @@ Then run `composer update`.
 ## Scaffolded distribution
 
 This package is a [`yii2-extensions/scaffold`](https://github.com/yii2-extensions/scaffold) provider for **dev
-environment metadata** (editor, gitignore, prettier, stylelint, super-linter configs, and more). Templates live under
+environment metadata** (editor, gitignore, prettier, stylelint, quality linter configs, and more). Templates live under
 `metadata/` and are mapped to consumer roots via the `{from, to}` form in `scaffold.json`.
 
 Opt in by allowing the plugin and listing this package as an authorised provider:
@@ -87,10 +87,9 @@ vendor/bin/scaffold status
 └── .github
     └── linters
         ├── .codespellrc               # replace: codespell config
-        ├── .editorconfig-checker.json # replace: editor-config-checker config for Super-Linter
+        ├── .editorconfig-checker.json # replace: editorconfig-checker config
         ├── .gitleaks.toml             # replace: gitleaks config
-        ├── .markdown-lint.yml         # replace: markdownlint config
-        └── actionlint.yml             # replace: actionlint config for Super-Linter
+        └── .markdown-lint.yml         # replace: markdownlint config
 ```
 
 Mode semantics:
@@ -111,9 +110,10 @@ either, both, or neither.
 [![Latest Stable Version](https://img.shields.io/packagist/v/php-forge/baseline.svg?style=for-the-badge&logo=packagist&logoColor=white&label=Stable)](https://packagist.org/packages/php-forge/baseline)
 [![Total Downloads](https://img.shields.io/packagist/dt/php-forge/baseline.svg?style=for-the-badge&logo=composer&logoColor=white&label=Downloads)](https://packagist.org/packages/php-forge/baseline)
 
-## Quality code
+## Project status
 
-[![Super-Linter](https://img.shields.io/github/actions/workflow/status/php-forge/baseline/linter.yml?style=for-the-badge&label=Super-Linter&logo=github)](https://github.com/php-forge/baseline/actions/workflows/linter.yml)
+[![Quality](https://img.shields.io/github/actions/workflow/status/php-forge/baseline/quality.yml?style=for-the-badge&label=Quality&logo=github)](https://github.com/php-forge/baseline/actions/workflows/quality.yml)
+[![Security](https://img.shields.io/github/actions/workflow/status/php-forge/baseline/security.yml?style=for-the-badge&label=Security&logo=github)](https://github.com/php-forge/baseline/actions/workflows/security.yml)
 [![StyleCI](https://img.shields.io/badge/StyleCI-Passed-44CC11.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.styleci.io/repos/php-forge/baseline?branch=main)
 
 ## Our social networks

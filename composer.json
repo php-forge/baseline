@@ -12,9 +12,9 @@
         "php",
         "php-forge",
         "prettier",
+        "quality",
         "rector",
-        "scaffold-provider",
-        "super-linter"
+        "scaffold-provider"
     ],
     "license": "BSD-3-Clause",
     "minimum-stability": "dev",
