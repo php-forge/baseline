@@ -36,9 +36,6 @@
         }
     },
     "config": {
-        "sort-packages": true,
-        "allow-plugins": {
-            "yii2-extensions/scaffold": true
-        }
+        "sort-packages": true
     }
 }
