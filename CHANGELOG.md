@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## 0.1.3 Under development
 
+- ci: replace Super-Linter with reusable quality and security workflows, group Dependabot updates, and refresh scaffolded linter and Gitleaks configs.
+
 ## 0.1.2 May 19, 2026
 
 - fix: remove `phpunit.xml` from `.gitignore` and update `composer-require-checker.json` structure.
