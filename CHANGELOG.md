@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## 0.1.5 Under development
 
+- ci: update codespell skip list to include `CHANGELOG.md` and `UPGRADE.md`.
+
 ## 0.1.4 July 05, 2026
 
 - ci: exclude VSCode and local GitHub CLI and Copilot config paths from scaffolded quality checks.
