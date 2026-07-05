@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## 0.1.4 Under development
 
+- ci: exclude VSCode and local GitHub CLI and Copilot config paths from scaffolded quality checks.
+
 ## 0.1.3 July 04, 2026
 
 - ci: replace Super-Linter with reusable quality and security workflows, group Dependabot updates, and refresh scaffolded linter and Gitleaks configs.
