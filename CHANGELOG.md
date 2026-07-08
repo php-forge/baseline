@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## 0.1.6 Under development
 
+- ci: update codespell skip list to remove duplicate entry.
+
 ## 0.1.5 July 05, 2026
 
 - ci: update codespell skip list to include `CHANGELOG.md` and `UPGRADE.md`.
