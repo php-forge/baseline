@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## 0.1.7 Under development
 
+- ci: update codespell skip list to remove redundant entry for metadata directory.
+
 ## 0.1.6 July 08, 2026
 
 - ci: update codespell skip list to remove duplicate entry.
