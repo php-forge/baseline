@@ -38,8 +38,8 @@ Then run `composer update`.
 
 ## Scaffolded distribution
 
-This package is a [`yii2-extensions/scaffold`](https://github.com/yii2-extensions/scaffold) provider for **dev
-environment metadata** (editor, gitignore, prettier, stylelint, quality linter configs, and more). Templates live under
+This package is a [`yii2-extensions/scaffold`](https://github.com/yii2-extensions/scaffold) provider for **core PHP
+dev environment metadata** (editor, gitignore, StyleCI, quality linter configs). Templates live under
 `metadata/` and are mapped to consumer roots via the `{from, to}` form in `scaffold.json`.
 
 Opt in by allowing the plugin and listing this package as an authorised provider:
@@ -80,9 +80,6 @@ vendor/bin/scaffold status
 ├── .gitattributes                     # replace: Text/binary handling, archive excludes
 ├── .gitignore                         # append: Common ignore patterns; project-specific lines preserved
 ├── .styleci.yml                       # replace: StyleCI config (PSR-12 + risky)
-├── .prettierignore                    # replace: Paths Prettier should skip
-├── .prettierrc.json                   # replace: Prettier formatting rules
-├── .stylelintignore                   # replace: Paths stylelint should skip
 ├── composer-require-checker.json      # preserve: Composer require-checker whitelist (project-specific)
 └── .github
     └── linters
