@@ -21,7 +21,7 @@
 ## Installation
 
 ```bash
-composer require php-forge/baseline:^0.1 --dev
+composer require php-forge/baseline:^0.2 --dev
 ```
 
 Or add the dependency manually to `composer.json`:
