@@ -89,8 +89,6 @@ vendor/bin/scaffold status
         └── .markdown-lint.yml         # replace: markdownlint config
 ```
 
-> **Frontend tooling:** `prettier` (`.prettierrc.json` + `.prettierignore`) and `stylelint` (`.stylelintignore` + `.stylelintrc.json`) moved to [`php-forge/baseline-frontend`](https://github.com/php-forge/baseline-frontend) — install it alongside `baseline` only in projects with JS/CSS/SCSS or that need Prettier in CI (optional `prettier-config`/`prettier-ignore-path` in `quality.yml`).
-
 Mode semantics:
 
 - `replace`: lock-step with this package. Local edits trigger a warning and the file is skipped on update.
